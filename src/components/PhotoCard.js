@@ -1,6 +1,10 @@
 import React from "react";
 
 const PhotoCard = props => {
+  if (!props.photoUrl) {
+    return <h3>Loading...</h3>;
+  }
+
   return (
     <div className="photo-card">
       <h2>Photo title: {props.title}</h2>
